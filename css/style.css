@@ -4,8 +4,8 @@
 }
 
 .bg-color{
-	width: 100%;
-	height: 100vh;
+    width: 100%;
+    min-height: 736px;
 	background-color: #fff;
 }
 
@@ -177,7 +177,8 @@
     border: 0.5px solid #6b319d;
 }
 
-input#search-bar {
+input#search-bar,
+input#discover-search-bar {
     margin: 0 auto;
     color: #6b319d;
     width: 100%;
@@ -188,6 +189,7 @@ input#search-bar {
     border-radius: 20px;
 }
 
+.discover-search-icon,
 .search-icon {
     position: relative;
     float: right;
@@ -205,6 +207,7 @@ input#search-bar {
     margin: 0 auto;
     padding-bottom: 15px;
     border-bottom: 1px solid #6B319D;
+    margin-bottom: 20px;
 }
 
 .trend-search {
@@ -237,9 +240,157 @@ input#search-bar {
     font-weight: bold;
     margin-right: 5px;
     margin-bottom: 10px;
-    /* white-space: normal !important; */
     transition: all 0.25s ease;
 }
+
+.trend-gif-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.favorite-gif-holder1,
+.favorite-gif-holder2,
+.discover-gif-holder1,
+.discover-gif-holder2,
+.gif-holder1,
+.gif-holder2 {
+    width: 45%;
+}
+
+.gif-container {
+    margin: 0 0 10px 0;
+}
+
+.gif-container > img {
+    max-width: 100%;
+}
+
+.last {
+    margin-bottom: 80px;
+}
+
+.favIcon {
+    width: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6B319D;
+    height: 50px;
+    padding-top: 10px;
+
+}
+
+.footer a > img {
+    width: 30px;
+}
+
+/* discover */
+.moreGif {
+    margin: 20px auto;
+}
+
+/* favorite */
+.fav {
+    text-align: center;
+}
+
+/* user */
+.user-info {
+    background-color: #fff;
+    height: 141px;
+}
+
+.flex-parent {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.user-portrait {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    margin: 0.5em 1.5em 0.5em 1.7em;
+    vertical-align: middle;
+}
+
+.flex-child {
+    flex: 1 1 auto;
+}
+
+.user-name h2 {
+    overflow: hidden;
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+    font-weight: 500;
+}
+
+.user-name p {
+    font-size: 0.9em;
+    color: #A7A7A7;
+}
+
+.setting-list {
+    margin-bottom: 80px;
+}
+
+.list-tab {
+    height: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    font-size: 0.9em;
+    margin: 8px 0;
+    background-color: #fff;
+}
+
+.list-title {
+    padding-left: 1.5em;
+}
+
+.profile-header-icon {
+    width: 28px;
+    margin: 0 10px;
+}
+
+.setting-list .profile-header-icon {
+    width: 24px;
+    opacity: 0.3;
+}
+
+.js-logout {
+    color: #fff;
+    width: 90%;
+    margin: 2em auto;
+    padding: 0.8em;
+    text-align: center;
+    background-color: #6B319D;
+    border-radius: 100px;
+}
+
+.signature {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
+
+
+
+
   
 
 

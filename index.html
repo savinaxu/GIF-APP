@@ -10,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff">
     <link rel="stylesheet" href="css/style.css">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -54,17 +52,14 @@
                 <form id="login-form" data-role="none">
                     <div class="form-control">
                         <label class="form-label" for="login-username">Username</label>
-                        <input class="form-input" type="text" id="login-username" data-role="none">
+                        <input class="form-input" required type="text" id="login-username" data-role="none">
                     </div>
                     <div class="form-control" data-role="none">
                         <label class="form-label" for="login-userpass">Password</label>
-                        <input class="form-input" type="password" id="login-userpass" data-role="none">
+                        <input class="form-input" required type="password" id="login-userpass" data-role="none">
                     </div>
-                    <a href="#" class="forgot">forgot?</a>
                     <div class="form-control" data-role="none">
-                        <a href="#home">
-                            <input class="form-button" type="submit" value="Log In" id="login-submit" data-role="none">
-                        </a>
+                        <input class="form-button" type="submit" value="Log In" id="login-submit" data-role="none">
                     </div>
                 </form>
             </div>
@@ -72,26 +67,26 @@
     </div>
     <!-- login -->
 
-    <!-- sign in -->
+    <!-- sign up -->
     <div data-role="page" id="signup-page">
         <div class="bg-color">
             <a href="#onboard-page"><img src="images/back-arrow.svg" class="login-back"></a>
             <div class="centered-child">
-    
+
                 <img src="images/logo.png" class="login-logo">
-                <div class="alert"></div>
 
                 <form id="signup-form" data-role="none">
                     <div class="form-control">
                         <label class="form-label" for="signup-username">Username</label>
-                        <input class="form-input" type="text" id="signup-username" placeholder="" data-role="none">
+                        <input class="form-input" required type="text" id="signup-username" placeholder="" data-role="none">
                     </div>
                     <div class="form-control" data-role="none">
                         <label class="form-label" for="signup-userpass">Password</label>
-                        <input class="form-input" type="password" id="signup-userpass" placeholder="" data-role="none">
+                        <input class="form-input" required type="password" id="signup-userpass" placeholder="" data-role="none">
                     </div>
                     <div class="form-control" data-role="none">
-                        <a href="#onboard-page"><input class="form-button" type="submit" value="Sign Up" id="signup-submit" data-role="none"></a>
+                        <input class="form-button" type="submit" value="Sign Up" id="signup-submit"
+                                data-role="none">
                     </div>
                 </form>
             </div>
@@ -123,13 +118,153 @@
                 </div>
             </div>
 
-            <div class="footer">
-                
+            <div class="trending-container last">
+                <div class="trend-search">
+                    <h1>Trending GIFs</h1>
+                </div>
+                <div class="trend-gif-container">
+                    <div class="gif-holder1"></div>
+                    <div class="gif-holder2"></div>
+                </div>
+            </div>
 
+            <div class="footer">
+                <a href="#home"><img src="images/home-active.svg" alt="home"></a>
+                <a href="#discover"><img src="images/discover.svg" alt="discover"></a>
+                <a href="#favorite"><img src="images/favorite.svg" alt="favorite"></a>
+                <a href="#user"><img src="images/user.svg" alt="user"></a>
             </div>
         </div>
     </div>
     <!-- home -->
+
+    <!-- discover -->
+    <div data-role="page" id="discover">
+        <div class="bg-color">
+            <div class="app-header">
+                <div class="app-logo">
+                    <img src="images/logo.png" alt="gif logo">
+                </div>
+
+                <div class="app-search">
+                    <form class="search-container">
+                        <input type="text" id="discover-search-bar" placeholder="Search GIF">
+                        <a class="search-btn" href="#discover">
+                            <img class="discover-search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="trending-container last">
+                <div class="trend-search">
+                    <h1>Trending GIF of <span class="input"></span></h1>
+                </div>
+                <div class="trend-gif-container">
+                    <div class="discover-gif-holder1"></div>
+                    <div class="discover-gif-holder2"></div>
+                </div>
+                <div class="find">
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <a href="#home"><img src="images/home.svg" alt="home"></a>
+                <a href="#discover"><img src="images/discover-active.svg" alt="discover"></a>
+                <a href="#favorite"><img src="images/favorite.svg" alt="favorite"></a>
+                <a href="#user"><img src="images/user.svg" alt="user"></a>
+            </div>
+        </div>
+    </div>
+    <!-- discover -->
+
+    <!-- favorite -->
+    <div data-role="page" id="favorite">
+        <div class="bg-color">
+            <div class="app-header">
+                <div class="app-logo">
+                    <img src="images/logo.png" alt="gif logo">
+                </div>
+            </div>
+
+            <div class="trending-container last">
+                <div class="trend-search">
+                    <h1 class="fav">Favorite GIFs</h1>
+                </div>
+                <div class="trend-gif-container">
+                    <div class="favorite-gif-holder1"></div>
+                    <div class="favorite-gif-holder2"></div>
+                </div>
+                <div class="find">
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <a href="#home"><img src="images/home.svg" alt="home"></a>
+                <a href="#discover"><img src="images/discover.svg" alt="discover"></a>
+                <a href="#favorite"><img src="images/favorite-active.svg" alt="favorite"></a>
+                <a href="#user"><img src="images/user.svg" alt="user"></a>
+            </div>
+        </div>
+    </div>
+    <!-- favorite -->
+
+    <!-- user -->
+    <div data-role="page" id="user">
+        <div class="bg-color">
+            <div class="app-header">
+                <div class="app-logo">
+                    <img src="images/logo.png" alt="gif logo">
+                </div>
+            </div>
+
+            <div class="flex-parent user-info">
+
+                <div class="flex-none">
+                    <img src="images/avatar.png" class="user-portrait">
+
+                </div>
+                <div class="flex-child user-name">
+                    <h2 class="username">Savina</h2>
+                    <p>GIFs Enthusiast</p>
+                </div>
+
+            </div>
+
+            <div class="setting-list">
+                <div class="list-tab flex-parent">
+                    <div class="flex-child list-title">Edit Profile</div>
+                    <div class="flex-none"><img src="images/next-arrow.svg" alt="" class="profile-header-icon"></div>
+                </div>
+                <div class="list-tab flex-parent">
+                    <div class="flex-child list-title">Account</div>
+                    <div class="flex-none"><img src="images/next-arrow.svg" alt="" class="profile-header-icon"></div>
+                </div>
+                <div class="list-tab flex-parent">
+                    <div class="flex-child list-title">Notifications</div>
+                    <div class="flex-none"><img src="images/next-arrow.svg" alt="" class="profile-header-icon"></div>
+                </div>
+                <div class="list-tab flex-parent">
+                    <div class="flex-child list-title">About</div>
+                    <div class="flex-none"><img src="images/next-arrow.svg" alt="" class="profile-header-icon"></div>
+                </div>
+
+                <a href="#onboard-page"><div class="js-logout">LOG OUT</div></a> 
+                <p class="signature">🐱 Made in San Francisco 🌁 </p>
+            </div>
+
+            <div class="footer">
+                <a href="#home"><img src="images/home.svg" alt="home"></a>
+                <a href="#discover"><img src="images/discover.svg" alt="discover"></a>
+                <a href="#favorite"><img src="images/favorite.svg" alt="favorite"></a>
+                <a href="#user"><img src="images/user-active.svg" alt="user"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- user -->
 
     <script src="js/script.js"></script>
 </body>
