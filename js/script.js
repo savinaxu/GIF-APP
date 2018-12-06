@@ -2,7 +2,7 @@
 
     //======= PRELOADER ========//
     $(window).on('load', function () {
-        $('#preloader').delay(800).fadeOut('slow');
+        $('#preloader').delay(1800).fadeOut('slow');
         $('#onboard-page').delay(550).fadeIn('slow').css({
             'overflow': 'visible'
         });
@@ -82,11 +82,26 @@
 
     function renderBtn() {
         for (let i = index; i < trend.length; i++) {
+            let anchor = $('<a href="#discover">')
             let button = $('<button>')
             button.addClass('trend-btn')
             button.text(trend[i])
-            $(".trend-btn-container").prepend(button)
+            anchor.append(button)
+            $(".trend-btn-container").prepend(anchor)
         }
+        addClickHandler()
+    }
+
+    function addClickHandler() {
+        $(".trend-btn").on("click", function() {
+            userInput = $(this).text()
+            $(".input").text(userInput)
+            $(".discover-gif-holder1").empty()
+            $(".discover-gif-holder2").empty()
+            pushInput(userInput)
+            getAPI(userInput)
+            renderShowMore()
+        })
     }
 
     function renderShowMore() {

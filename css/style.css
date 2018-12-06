@@ -85,12 +85,25 @@
 	
 }
 
-.onboard-btn .signup-btn {
+.onboard-btn .signup-btn,
+.signup-btn {
 	font-weight: 400;
-	color: #6B319D;
+	color: #6B319D !important;
 	font-size: 0.8em;
 	padding-top: 1.3em;
 	
+}
+
+.hint {
+    font-size: 18px;
+    margin-top: 50px;
+
+}
+
+.sign-up {
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 /* login */
@@ -226,14 +239,15 @@ input#discover-search-bar {
 } */
 
 .trend-btn {
+    border-style: none;
     display: inline-block;
     width: auto !important;
-    height: 40px;
+    /* height: 40px; */
     outline: none;
     text-align: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background: #6B319D;
-    border: 2px solid #6B319D;
+    /* border: 2px solid #6B319D; */
     color: white;
     letter-spacing: 1px;
     font-size: 12px;
@@ -241,6 +255,7 @@ input#discover-search-bar {
     margin-right: 5px;
     margin-bottom: 10px;
     transition: all 0.25s ease;
+    padding: 5px !important;
 }
 
 .trend-gif-container {

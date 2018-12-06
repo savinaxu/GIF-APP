@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="gif.appcache">
 
 <head>
     <meta charset="UTF-8">
+    <title>GIF</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GIF</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/logo.png">
+    <link rel="shortcut icon" sizes="120x120" href="images/logo.png">
+    <link rel="shortcut icon" sizes="152x152" href="images/logo.png">
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
@@ -20,6 +27,9 @@
     <div id="preloader">
         <div class="pre-container">
             <img src="images/logo.png">
+            <br>
+            <br>
+            <p class="hint">Click on the image to see the magic happen!</p>
         </div>
     </div>
     <!-- preload -->
@@ -33,7 +43,7 @@
                     <div class="login-btn">LOG IN</div>
                 </a>
                 <a href="#signup-page">
-                    <div class="signup-btn">Don't have an account? Sign Up</div>
+                    <p class="signup-btn">Don't have an account? <span class="sign-up">Sign Up</span></p>
                 </a>
             </div>
         </div>
@@ -62,6 +72,10 @@
                         <input class="form-button" type="submit" value="Log In" id="login-submit" data-role="none">
                     </div>
                 </form>
+
+                <a href="#signup-page">
+                    <p class="signup-btn">Don't have an account? <span class="sign-up">Sign Up</span></p>
+                </a>
             </div>
         </div>
     </div>
@@ -195,9 +209,6 @@
                 <div class="trend-gif-container">
                     <div class="favorite-gif-holder1"></div>
                     <div class="favorite-gif-holder2"></div>
-                </div>
-                <div class="find">
-
                 </div>
             </div>
 
